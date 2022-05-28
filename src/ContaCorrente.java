@@ -1,5 +1,5 @@
 
-public class ContaCorrente extends Conta {
+public class ContaCorrente extends RootAccount {
 
 	public ContaCorrente(Cliente cliente) {
 		super(cliente);
@@ -10,5 +10,5 @@ public class ContaCorrente extends Conta {
 		System.out.println("=== Extrato Conta Corrente ===");
 		super.imprimirInfosComuns();
 	}
-	
+
 }

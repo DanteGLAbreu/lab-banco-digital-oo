@@ -2,17 +2,22 @@
 public class Main {
 
 	public static void main(String[] args) {
-		Cliente venilton = new Cliente();
-		venilton.setNome("Venilton");
+		Cliente customer = new Cliente();
+		customer.setNome("Cliente");
 		
-		Conta cc = new ContaCorrente(venilton);
-		Conta poupanca = new ContaPoupanca(venilton);
+		RootAccount cc = new ContaCorrente(customer);
+		RootAccount poupanca = new ContaPoupanca(customer);
+		RootAccount investimento = new ContaInvestimento(customer);
 
 		cc.depositar(100);
-		cc.transferir(100, poupanca);
+		cc.sacar(50);
+		poupanca.depositar(100);
+		poupanca.transferir(30, cc);
+		investimento.depositar(1000);
 		
 		cc.imprimirExtrato();
 		poupanca.imprimirExtrato();
+		investimento.imprimirExtrato();
 	}
 
 }

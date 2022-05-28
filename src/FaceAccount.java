@@ -1,11 +1,11 @@
 
-public interface IConta {
+public interface FaceAccount {
 	
 	void sacar(double valor);
 	
 	void depositar(double valor);
 	
-	void transferir(double valor, IConta contaDestino);
+	void transferir(double valor, FaceAccount contaDestino);
 	
 	void imprimirExtrato();
 }

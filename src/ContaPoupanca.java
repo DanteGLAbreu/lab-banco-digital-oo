@@ -1,5 +1,5 @@
 
-public class ContaPoupanca extends Conta {
+public class ContaPoupanca extends RootAccount {
 
 	public ContaPoupanca(Cliente cliente) {
 		super(cliente);
